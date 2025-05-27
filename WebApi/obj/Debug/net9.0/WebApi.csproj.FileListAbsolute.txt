@@ -1,0 +1,6 @@
+D:\Diego\Projetos-2025\Auth\Cerbero\WebApi\obj\Debug\net9.0\WebApi.csproj.AssemblyReference.cache
+D:\Diego\Projetos-2025\Auth\Cerbero\WebApi\obj\Debug\net9.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Diego\Projetos-2025\Auth\Cerbero\WebApi\obj\Debug\net9.0\WebApi.AssemblyInfoInputs.cache
+D:\Diego\Projetos-2025\Auth\Cerbero\WebApi\obj\Debug\net9.0\WebApi.AssemblyInfo.cs
+D:\Diego\Projetos-2025\Auth\Cerbero\WebApi\obj\Debug\net9.0\WebApi.csproj.CoreCompileInputs.cache
+D:\Diego\Projetos-2025\Auth\Cerbero\WebApi\obj\Debug\net9.0\WebApi.MvcApplicationPartsAssemblyInfo.cache

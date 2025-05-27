@@ -1,0 +1,4 @@
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache

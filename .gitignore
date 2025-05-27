@@ -1,0 +1,60 @@
+## Compilação do Visual Studio
+bin/
+obj/
+out/
+
+## Arquivos de usuário do Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Diretórios do Visual Studio Code
+.vscode/
+
+## Pacotes NuGet
+*.nupkg
+*.snupkg
+packages/
+# Se você estiver usando o pacote NuGet localmente
+*.nuget/
+
+## Logs
+*.log
+
+## Configurações locais
+appsettings.Development.json
+appsettings.Local.json
+
+## Testes
+TestResults/
+*.coverage
+*.coveragexml
+
+## Outros
+*.dbmdl
+*.pdb
+*.cache
+*.vs/
+_ReSharper*/
+.idea/
+*.DotSettings.user
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Sistema operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# Docker
+**/docker-compose.override.yml
