@@ -2,6 +2,7 @@
 **/bin/
 **/obj/
 out/
+obj/
 
 ## Arquivos de usuário do Visual Studio
 *.user

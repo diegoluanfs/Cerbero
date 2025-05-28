@@ -22,7 +22,7 @@ namespace Domain.Interfaces.Repositories
         /// </summary>
         /// <param name="email">Email do usuário.</param>
         /// <returns>Usuário correspondente ao email.</returns>
-        Task<User?> GetByEmailAsync(string email);
+        Task<User?> GetByEmailAsync(string email, Guid tenantId);
 
         /// <summary>
         /// Adiciona um novo usuário.

@@ -1,5 +1,6 @@
 using Application.DTOs;
 using Application.Interfaces.Services;
+using Cerbero.Application.Interfaces.Services;
 using Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -7,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Cerbero.Domain.Entities;
 
 namespace Application.Services;
 
@@ -15,10 +17,12 @@ public class AuthService : IAuthService
     private readonly UserDomainService _userDomainService;
     private readonly IConfiguration _configuration;
     private readonly IUserService _userService;
+    private readonly ITenantService _tenantService;
 
 
-    public AuthService(IUserService userService, UserDomainService userDomainService, IConfiguration configuration)
+    public AuthService(IUserService userService, UserDomainService userDomainService, IConfiguration configuration, ITenantService tenantService)
     {
+        _tenantService = tenantService ?? throw new ArgumentNullException(nameof(tenantService));
         _userService = userService;
         _userDomainService = userDomainService;
         _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
@@ -26,13 +30,19 @@ public class AuthService : IAuthService
 
     public async Task<AuthResponseDto> AuthenticateAsync(LoginDto loginDto)
     {
-        var user = await _userDomainService.GetUserByEmailAsync(loginDto.Email);
+        var tenant = await _tenantService.GetByIdAsync(loginDto.TenantId);
+        if (tenant == null)
+        {
+            throw new UnauthorizedAccessException("Tenant não encontrado ou inativo.");
+        }
+
+        var user = await _userDomainService.GetUserByEmailAsync(loginDto.Email, tenant.Id);
         if (user == null || !VerifyPassword(loginDto.Password, user.PasswordHash))
         {
             throw new UnauthorizedAccessException("Credenciais inválidas.");
         }
 
-        var token = GenerateJwtToken(user);
+        var token = GenerateJwtToken(user, tenant);
         return new AuthResponseDto
         {
             Token = token,
@@ -42,7 +52,7 @@ public class AuthService : IAuthService
 
     public async Task RegisterUserAsync(SignupDto signupDto)
     {
-        var existingUser = await _userDomainService.GetUserByEmailAsync(signupDto.Email);
+        var existingUser = await _userDomainService.GetUserByEmailAsync(signupDto.Email, signupDto.TenantId);
         if (existingUser != null)
         {
             throw new InvalidOperationException("Usuário já registrado.");
@@ -61,7 +71,7 @@ public class AuthService : IAuthService
         await _userDomainService.CreateUserAsync(user);
     }
 
-    private string GenerateJwtToken(User user)
+    private string GenerateJwtToken(User user, Tenant tenant)
     {
         var jwtSettings = _configuration.GetSection("JwtSettings");
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]));
@@ -70,7 +80,9 @@ public class AuthService : IAuthService
         var claims = new List<Claim>
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim(ClaimTypes.Email, user.Email)
+            new Claim(ClaimTypes.Email, user.Email),
+            new Claim("tenant_id", tenant.Id.ToString()),
+            new Claim("tenant_name", tenant.Name ?? string.Empty)
         };
 
         // Adicionar roles como claims

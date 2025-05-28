@@ -13,9 +13,16 @@ public class UserDomainService
         _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
     }
 
-    public async Task<User?> GetUserByEmailAsync(string email)
+    public async Task<User?> GetUserByEmailAsync(string email, Guid tenantId)
     {
-        return await _userRepository.GetByEmailAsync(email);
+        if (string.IsNullOrWhiteSpace(email))
+            throw new ArgumentException("Email cannot be null or empty.", nameof(email));
+
+        if (tenantId == Guid.Empty)
+            throw new ArgumentException("Tenant ID cannot be empty.", nameof(tenantId));
+
+        // Assuming the repository method filters by tenant ID internally
+        return await _userRepository.GetByEmailAsync(email, tenantId);
     }
 
     public async Task CreateUserAsync(User user)

@@ -26,7 +26,7 @@ public class UserService : IUserService
     public async Task AddAsync(User user)
     {
         // Verificar se o email já está em uso
-        var existingUser = await _userRepository.GetByEmailAsync(user.Email);
+        var existingUser = await _userRepository.GetByEmailAsync(user.Email, user.TenantId);
         if (existingUser != null)
         {
             throw new InvalidOperationException("O email já está em uso.");

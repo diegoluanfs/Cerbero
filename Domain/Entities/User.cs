@@ -33,4 +33,7 @@ public class User
 
     /// <summary>Lista de roles associadas ao usuário</summary>
     public ICollection<string> Roles { get; set; } = new List<string>();
+
+    /// <summary> Id do tenant ao qual o usuário pertence</summary>
+    public Guid TenantId { get; set; }
 }
