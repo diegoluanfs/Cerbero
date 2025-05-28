@@ -2,3 +2,17 @@ D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructu
 D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructure.AssemblyInfoInputs.cache
 D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructure.AssemblyInfo.cs
 D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructure.csproj.AssemblyReference.cache
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\bin\Debug\net9.0\Infrastructure.deps.json
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\bin\Debug\net9.0\Infrastructure.dll
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\bin\Debug\net9.0\Infrastructure.pdb
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\bin\Debug\net9.0\Domain.dll
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\bin\Debug\net9.0\Domain.pdb
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastr.15EFFBFE.Up2Date
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructure.dll
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\bin\Debug\net9.0\Infrastructure.runtimeconfig.json
+D:\Diego\Projetos-2025\Auth\Cerbero\Infrastructure\obj\Debug\net9.0\Infrastructure.genruntimeconfig.cache

@@ -1,3 +1,5 @@
+using Application.DTOs;
+
 public interface IAuthService
 {
     /// <summary>

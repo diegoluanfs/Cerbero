@@ -1,6 +1,6 @@
 ## Compilação do Visual Studio
-bin/
-obj/
+**/bin/
+**/obj/
 out/
 
 ## Arquivos de usuário do Visual Studio
@@ -12,11 +12,13 @@ out/
 ## Diretórios do Visual Studio Code
 .vscode/
 
+## Diretórios do Visual Studio
+.vs/
+
 ## Pacotes NuGet
 *.nupkg
 *.snupkg
 packages/
-# Se você estiver usando o pacote NuGet localmente
 *.nuget/
 
 ## Logs
@@ -35,7 +37,6 @@ TestResults/
 *.dbmdl
 *.pdb
 *.cache
-*.vs/
 _ReSharper*/
 .idea/
 *.DotSettings.user

@@ -5,7 +5,6 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using Application.DTOs;
 using Domain.Entities;
 using Infrastructure.Data;
 using Domain.Interfaces.Repositories;

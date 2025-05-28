@@ -1,12 +1,12 @@
-using Support.Application.DTOs;
-using Support.Domain.Entities;
+using Application.DTOs;
+using Application.Interfaces.Services;
+using Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
-using PasswordVerificationResult = Microsoft.AspNetCore.Identity.PasswordVerificationResult;
 
 namespace Application.Services;
 
@@ -14,10 +14,13 @@ public class AuthService : IAuthService
 {
     private readonly UserDomainService _userDomainService;
     private readonly IConfiguration _configuration;
+    private readonly IUserService _userService;
 
-    public AuthService(UserDomainService userDomainService, IConfiguration configuration)
+
+    public AuthService(IUserService userService, UserDomainService userDomainService, IConfiguration configuration)
     {
-        _userDomainService = userDomainService ?? throw new ArgumentNullException(nameof(userDomainService));
+        _userService = userService;
+        _userDomainService = userDomainService;
         _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
     }
 

@@ -1,9 +1,10 @@
-﻿using Support.Application.Interfaces.Repositories;
-using Support.Domain.Entities;
+﻿using Application.Interfaces.Services;
+using Domain.Entities;
+using Domain.Interfaces.Repositories;
 
 namespace Application.Services;
 
-public class UserService
+public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
 

@@ -10,7 +10,9 @@ namespace Infrastructure.Data
         public AppDbContext CreateDbContext(string[] args)
         {
             // Caminho absoluto para evitar ambiguidades  
-            string basePath = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "../../WebApi"));
+
+            string basePath = Directory.GetCurrentDirectory();
+            //string basePath = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "./../../../WebApi"));
 
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(basePath)

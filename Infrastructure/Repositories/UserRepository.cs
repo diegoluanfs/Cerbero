@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Support.Application.Interfaces.Repositories;
-using Support.Domain.Entities;
-using Support.Infrastructure.Data;
+﻿using Domain.Entities;
+using Domain.Interfaces.Repositories;
+using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories;
 

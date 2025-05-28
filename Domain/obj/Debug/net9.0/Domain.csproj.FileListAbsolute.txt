@@ -2,3 +2,11 @@ D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.GeneratedMSBu
 D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
 D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
 D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\bin\Debug\net9.0\Domain.deps.json
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\bin\Debug\net9.0\Domain.dll
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\bin\Debug\net9.0\Domain.pdb
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.dll
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\refint\Domain.dll
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\Domain.pdb
+D:\Diego\Projetos-2025\Auth\Cerbero\Domain\obj\Debug\net9.0\ref\Domain.dll
